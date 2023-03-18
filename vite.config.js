@@ -30,7 +30,7 @@ export default defineConfig({
             },
         }),
     ],
-    server: {
-        origin: 'http://localhost:8000',
-    },
+    // server: {
+    //     origin: 'http://localhost:8000',
+    // },
 });
