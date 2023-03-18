@@ -1,0 +1,41 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-4ed993c7.js",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/Pages/Index.css": {
+    "file": "assets/Index-e82eb78e.css",
+    "src": "resources/js/Pages/Index.css"
+  },
+  "resources/js/Pages/Index.vue": {
+    "css": [
+      "assets/Index-e82eb78e.css"
+    ],
+    "file": "assets/Index-aa90112c.js",
+    "imports": [
+      "resources/js/app.js",
+      "resources/css/app.css"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Index.vue"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-8eff29b4.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.js": {
+    "css": [
+      "assets/app-8eff29b4.css"
+    ],
+    "dynamicImports": [
+      "resources/js/Pages/Index.vue"
+    ],
+    "file": "assets/app-d96f48c2.js",
+    "imports": [
+      "resources/css/app.css"
+    ],
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}

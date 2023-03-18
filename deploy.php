@@ -45,7 +45,7 @@ task('deploy', [
     'artisan:view:cache',
     'artisan:config:cache',
     'artisan:optimize:clear',
-    'artisan:migrate',
+    // 'artisan:migrate',
     // 'artisan:db:seed',
     // 'npm:install',
     // 'npm:run:prod',
@@ -53,9 +53,9 @@ task('deploy', [
     // 'php-fpm:reload',
 ]);
 
-// task('npm:run:prod', function () {
-//     cd('{{release_or_current_path}}');
-//     run('npm run prod');
-// });
+task('npm:run:prod', function () {
+    cd('{{release_or_current_path}}');
+    run('npm run prod');
+});
 
 after('deploy:failed', 'deploy:unlock');
