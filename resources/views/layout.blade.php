@@ -24,7 +24,6 @@
             }
 
             body {
-                background-image: url("{{ asset('back-1.jpg') }}");
                 background-size: cover
             }
 
