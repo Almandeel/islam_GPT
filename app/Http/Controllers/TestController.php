@@ -7,11 +7,11 @@ use Inertia\Inertia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Cion\TextToSpeech\Facades\TextToSpeech;
-
-
 class TestController extends Controller
 {
     public $api_header = [];
+
+    private $detector;
 
     public function __construct() {
         $this->api_header = [
@@ -42,7 +42,7 @@ class TestController extends Controller
 
         $chat_gpt = $this->callGptApi($whisper_transcriptions);
 
-        $aws_tts = TextToSpeech::saveTo('public/response/'.$name.'.mp3')->convert($chat_gpt);
+        $aws_tts = TextToSpeech::saveTo('public/response/'.$name.'.mp3')->language('arb')->convert($chat_gpt);
 
         return asset("storage/response/".$name.".mp3");
     }
@@ -56,7 +56,7 @@ class TestController extends Controller
         ->post('https://experimental.willow.vectara.io/v1/audio/transcriptions', [
             'model' => 'whisper-1',
         ])->json();
-            // dd($whisper_transcriptions, $file, $this->api_header);
+
         return  $whisper_transcriptions['text'];
     }
 

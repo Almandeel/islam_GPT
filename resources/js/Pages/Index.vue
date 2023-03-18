@@ -1,13 +1,12 @@
 <template>
-    <div class="flex items-center justify-center h-screen bg-red-lightest">
+    <div class="flex items-center justify-center h-screen bg-red-lightest ">
         <Loader ref="Loader"></Loader>
-
-
         <div class="flex flex-col">
+            <div class="overlay"></div>
             <div class="basis-1/2">
                 <audio v-show="hasAudio" :src="audio_src" controls autoplay="true"></audio>
 
-                <tapir-widget v-show="!hasAudio" ref="audio" backendEndpoint="/audio"  :time="2" buttonColor="green"/>
+                <tapir-widget v-show="!hasAudio" ref="audio" backendEndpoint="/audio"  :time="2" buttonColor="white"/>
             </div>
             <div class="basis-1/2">
                 <button

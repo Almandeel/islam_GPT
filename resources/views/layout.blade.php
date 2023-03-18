@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{ env('APP_NAME') }}</title>
 
 
         <!-- Fonts -->
@@ -21,6 +21,21 @@
             }
             .p-3.mt-8.text-black.rounded-md {
                 display: none
+            }
+
+            body {
+                background-image: url("{{ asset('back-1.jpg') }}");
+                background-size: cover
+            }
+
+            .overlay {
+                background-color: #3d3d3d42;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: -6;
             }
         </style>
 
